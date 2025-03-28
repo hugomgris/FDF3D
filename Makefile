@@ -12,7 +12,7 @@ NAME        := FDF3D
 # -=-=-=-=-    FLAG -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
 CPP         = c++
-FLAGS       = -Werror -Wall -Wextra -std=c++17 -pedantic -g -fsanitize=address
+FLAGS       = -Werror -Wall -Wextra -std=c++17 -g -fsanitize=address
 DEPFLAGS    = -MMD -MP
 
 # -=-=-=-=-    PATH -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
@@ -29,6 +29,7 @@ LIBS        := $(RAYLIBDIR)/src/libraylib.a -lm -ldl -lGL -lpthread -lX11
 # -=-=-=-=-    FILES -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
 SRC         := src/main.cpp \
+				src/Game.cpp \
 
 OBJS        = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 DEPS        = $(addprefix $(DEP_DIR)/, $(SRC:.cpp=.d))
